@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolicLinker", "SymbolicLinker\SymbolicLinker.csproj", "{F090E6C9-7C9B-4339-A293-573FE00D7142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{B540C5D6-9869-420F-BEEF-C546AE88287B}"
+	ProjectSection(SolutionItems) = preProject
+		RegistryKeys.reg = RegistryKeys.reg
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolicLinker.Installer", "SymbolicLinker.Installer\SymbolicLinker.Installer.csproj", "{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SymbolicLinker.Shared", "SymbolicLinker.Shared\SymbolicLinker.Shared.shproj", "{F830B68E-6113-41E0-85C9-2F9CD65CC713}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release (Local)|Any CPU = Release (Local)|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Release (Local)|Any CPU.ActiveCfg = Release (Local)|Any CPU
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Release (Local)|Any CPU.Build.0 = Release (Local)|Any CPU
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F090E6C9-7C9B-4339-A293-573FE00D7142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Release (Local)|Any CPU.ActiveCfg = Release (Local)|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Release (Local)|Any CPU.Build.0 = Release (Local)|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDAA34D8-8561-4054-AC82-EE5C8EFAF5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {127AC8B3-9B6B-4213-AC2C-0CAAC25A41CD}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SymbolicLinker.Shared\SymbolicLinker.Shared.projitems*{edaa34d8-8561-4054-ac82-ee5c8efaf5c1}*SharedItemsImports = 4
+		SymbolicLinker.Shared\SymbolicLinker.Shared.projitems*{f090e6c9-7c9b-4339-a293-573fe00d7142}*SharedItemsImports = 4
+		SymbolicLinker.Shared\SymbolicLinker.Shared.projitems*{f830b68e-6113-41e0-85c9-2f9cd65cc713}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

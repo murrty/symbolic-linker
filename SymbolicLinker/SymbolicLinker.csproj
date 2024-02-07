@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F090E6C9-7C9B-4339-A293-573FE00D7142}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SymbolicLinker</RootNamespace>
+    <AssemblyName>SymbolicLinker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>12.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28Local%29|AnyCPU'">
+    <OutputPath>bin\Release %28Local%29\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ProgramIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments.cs" />
+    <Compile Include="Classes\Const.cs" />
+    <Compile Include="Classes\MakeLink.cs" />
+    <Compile Include="Classes\Win32.cs" />
+    <Compile Include="Controls\CommandLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Enums\ButtonIcon.cs" />
+    <Compile Include="Controls\Natives\NativeMethods.cs" />
+    <Compile Include="ExistingAction.cs" />
+    <Compile Include="Forms\frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLinkExists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLinkExists.Designer.cs">
+      <DependentUpon>frmLinkExists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalNamespaces.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\BetterFolderBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Runtime\Extensions.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\AllowNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\DisallowNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\DoesNotReturnAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\ExperimentalAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\MaybeNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\MaybeNullWhenAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\MemberNotNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\NotNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\NotNullWhenAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CodeAnalysis\SetsRequiredMembersAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CompilerServices\CollectionBuilderAttribute.cs" />
+    <Compile Include="Runtime\System\Diagnostics\CompilerServices\StringSyntaxAttribute.cs" />
+    <Compile Include="Runtime\System\Index.cs" />
+    <Compile Include="Runtime\System\Range.cs" />
+    <Compile Include="Runtime\System\Runtime\CompilerServices\CallerArgumentExpressionAttribute.cs" />
+    <Compile Include="Runtime\System\Runtime\CompilerServices\CompilerFeatureRequiredAttribute.cs" />
+    <Compile Include="Runtime\System\Runtime\CompilerServices\IsExternalInit.cs" />
+    <Compile Include="Runtime\System\Runtime\CompilerServices\RequiredMemberAttribute.cs" />
+    <Compile Include="Runtime\System\Runtime\CompilerServices\RuntimeHelpers.cs" />
+    <Compile Include="Tests.cs" />
+    <EmbeddedResource Include="Forms\frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLinkExists.resx">
+      <DependentUpon>frmLinkExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuildDate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgramIcon.ico" />
+  </ItemGroup>
+  <Import Project="..\SymbolicLinker.Shared\SymbolicLinker.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if "$(ConfigurationName)" == "Release" "BuildDateWriter.exe" "$(ProjectDir)\Resources\BuildDate.txt"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
